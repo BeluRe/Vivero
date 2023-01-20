@@ -51,10 +51,14 @@ public class ProductoController {
             return new ResponseEntity(new Mensaje("el precio debe ser mayor que 0"), HttpStatus.BAD_REQUEST);
         if(productoService.existByNombre(productoDto.getNombre()))
             return new ResponseEntity(new Mensaje("ese nombre ya existe"), HttpStatus.BAD_REQUEST);
-        Producto producto = new Producto(productoDto.getNombre(), productoDto.getPrecio());
+//cargaba productos con id, pero con datos null, el error: desde el entity se pasaban tres params y en el controller dos.Solución: agregando el param id al constructor(manual) y se le asignó una variable (lo hizo el programa)
+      Long id;
+      Producto producto = new Producto(id= null, productoDto.getNombre(), productoDto.getPrecio());
         productoService.save(producto);
         return new ResponseEntity(new Mensaje("producto creado"), HttpStatus.OK);
     }
+
+
 
 
     @PutMapping("/update/{id}")
