@@ -1,0 +1,42 @@
+<p>editar-producto works!</p>
+
+<div class="cointainer" >
+         <div class="boostrap-wrapper vevo">
+         <div class="col-md-6 offset-md-3" style="margin-bottom: 50px; margin-top: 50px">
+     
+     
+     
+           <mat-card style="padding-top: 50px; padding-bottom: 50px">
+             <div class="container text-center" style="padding-bottom: 30px">
+
+               <h1 class="text-center">Registrar Planta</h1>
+             </div>
+     
+             <form (ngSubmit)="onUpdate()" novalidate #f="ngForm" class="form-style">
+               <mat-form-field class="full-width" appearance="outline">
+                 <mat-label>Nombre de la planta</mat-label>
+                 <!-- required es un campo requerido -->
+                 <input disabled matInput required [(ngModel)]="producto.nombre" name="nombre"
+                   placeholder="Digite nombre de la Planta" />
+               </mat-form-field>
+     
+               <mat-form-field class="full-width" appearance="outline">
+                 <mat-label>Precio</mat-label>
+                 <input type="number" matInput required [(ngModel)]="producto.precio" name="precio"
+                   placeholder="Digite el precio" />
+               </mat-form-field>
+     
+     
+               <div class="container text-center">
+                 <!-- Boton submit -->
+                 <button mat-stroked-button color="primary" [disabled]="!f.valid ">
+                   Actualizar
+                 </button>
+                 <!-- Reset sirve para limpiar los campos -->
+               </div>
+             </form>
+           </mat-card>
+           <button type="button" class="btn btn-success" style="width: 100%;" routerLink="/dashboard">Volver</button>
+         </div>
+       </div>
+     </div>

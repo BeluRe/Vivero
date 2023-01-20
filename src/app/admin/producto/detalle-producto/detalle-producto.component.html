@@ -1,0 +1,15 @@
+
+<div class="row mt-5" *ngIf="producto">
+  <div class="col-md-4 mx-auto">
+    <div class="card" style="width:18rem;">
+      <div class="card-header">
+<mat-list role="list">
+  <mat-list-item role="listitem"><b>ID:     </b>{{producto.id}}</mat-list-item>
+  <mat-list-item role="listitem"><b>Nombre: </b>{{producto.nombre}}</mat-list-item>
+  <mat-list-item role="listitem"><b>Precio: </b>{{producto.precio}} $</mat-list-item>
+</mat-list>
+</div>
+<button class=" btn btn-outline-primary btn-block" (click)="volver()">volver</button>
+</div>
+</div>
+</div>
