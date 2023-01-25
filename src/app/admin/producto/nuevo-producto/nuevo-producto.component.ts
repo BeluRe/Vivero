@@ -15,8 +15,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class NuevoProductoComponent implements OnInit {
 
-nombre: string= "lo que sea";
-precio: number = 100;
+nombre: string= "";
+precio: number = 0;
 
 
 

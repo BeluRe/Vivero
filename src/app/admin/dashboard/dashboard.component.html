@@ -1,95 +1,18 @@
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-        
-         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-           <span class="navbar-toggler-icon"></span>
-         </button>
-       
-         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-           <ul class="navbar-nav mr-auto">
-             <li class="nav-item active">
-               <a class="nav-link" routerLink="/lista">lista</a>
-             </li>
-             <li class="nav-item">
-               <a class="nav-link" routerLink="/nuevo">nuevo</a>
-             </li>
-             
-           <form class="form-inline my-2 my-lg-0">
-             <input class="form-control mr-sm-2" type="search" placeholder="" aria-label="Search">
-             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">buscar</button>
-           </form>
-         
-       
-           
 
 <div class="container">
- <div class="row">
-        
-         
+<mat-action-list>
+  <mat-card>
+  <div class="text-center menu"><h2 >Menu de administracion</h2></div>
 
-<table class="table ">
-         <thead class="thead-dark">
-         <tr>
-                  <th scope="col">Id</th>
-                  <th scope="col">Nombre</th>
-                  <th scope="col">Precio</th>
-                  <th scope="col">Ver</th>
-                  <th scope="col">Detalle</th>
-                  <th scope="col">Editar</th>
-                  <th scope="col">Eliminar</th>                            
-         </tr>
-         </thead>
-         <tbody>
-                  <tr *ngFor="let producto of productos">
-                  <td>{{ producto.id }}</td>
-                  <td>{{ producto.nombre }}</td>
-                  <td>{{ producto.precio }}</td>
+  <button mat-list-item routerLink="/nuevo">
+    <mat-icon mat-list-icon >library_add</mat-icon> Añadir producto
+  </button>
 
-                  <td *ngIf="producto.id != undefined">
-                    <button
-                      class="btn btn-outline-dark boton"
-                      routerLink="/detalle/{{producto.id}}"
-                    >
-                      <i class="far fa-trash-alt"></i> Ver 
-                    </button>
-                  </td>
-                  
-                  <td *ngIf="producto.id != undefined">
-                           <button
-                             class="btn btn-outline-dark boton"
-                             routerLink="/detalle/{{producto.id}}"
-                           >
-                             <i class="far fa-trash-alt"></i>Detalle
-                           </button>
-                         </td>
-
-
-<td *ngIf="producto.id != undefined">
-         <button
-           class="btn btn-outline-dark boton"
-           routerLink="/editar/{{producto.id}}"
-         >
-           <i class="far fa-trash-alt"></i>Editar
-         </button>
-       </td>
-      
-
+  <button mat-list-item routerLink="/lista">
+    <mat-icon mat-list-icon>create</mat-icon> Lista / Editar / Eliminar producto
+  </button>
  
- <td *ngIf="producto.id != undefined">
-         <button
-           class="btn btn-outline-danger boton"
-           (click)="eliminar(producto.id)"
-         >
-           <i class="far fa-trash-alt"></i> Eliminar
-         </button>
-       </td>
-      
-</tbody>
-</table>
-
-         <button
-           class="btn btn-outline-danger boton" routerLink="/nuevo/"
-           
-         >
-           <i class="far fa-trash-alt"></i>Nuevo
-         </button>
+</mat-card>
+</mat-action-list>
+</div>
