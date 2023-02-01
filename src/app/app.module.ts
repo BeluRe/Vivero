@@ -12,11 +12,14 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { AdminModule } from './admin/admin.module';
-import { HomeModule } from './home/home.module';
+import { interceptorProvider } from './admin/interceptors/prod-interceptor.service';
+
 
 @NgModule({
   declarations: [
     AppComponent,
+   
+    
     
   ],
   imports: [
@@ -32,12 +35,15 @@ import { HomeModule } from './home/home.module';
     HttpClientModule,
     FormsModule,
     AdminModule,
-    HomeModule,
+ 
+    
+    
     
 
 
   ],
-  providers: [],
+
+  providers: [interceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

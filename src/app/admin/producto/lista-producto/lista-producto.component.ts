@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Producto } from 'src/app/models/producto';
 import { ProductoService } from 'src/app/service/producto.service';
+import { TokenService } from 'src/app/service/token.service';
 import Swal from 'sweetalert2';
 
 
@@ -12,14 +13,27 @@ import Swal from 'sweetalert2';
   styleUrls: ['./lista-producto.component.css']
 })
 export class ListaProductoComponent implements OnInit {
-  productos: Producto[]=[];
+  productos!: Producto[];
+  roles: string[] = [];
+  tokenService: any;
+  isAdmin:  any;
+  
 
 
-  constructor(private productoService: ProductoService,
-    private snack:MatSnackBar) { }
+  constructor(
+    private productoService: ProductoService,
+    private snack:MatSnackBar, 
+    private tokenservice: TokenService) { }
 
   ngOnInit(): void {
+
     this.cargarProductos();
+    this.roles = this.tokenService.getAuthorities();
+    this.roles.forEach(rol => {
+      if (rol === 'ROLE_ADMIN') {
+        this.isAdmin = true;
+      }
+    });
     
   }
 

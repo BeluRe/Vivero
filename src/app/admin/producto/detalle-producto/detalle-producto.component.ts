@@ -43,7 +43,7 @@ export class DetalleProductoComponent implements OnInit {
     
   }
  volver(): void {
-  this.router.navigate(['/dashboard']);
+  this.router.navigate(['/lista']);
  }
   
   }

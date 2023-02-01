@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HomeModule } from '../home/home.module';
 import { ListaProductoComponent } from './producto/lista-producto/lista-producto.component';
 import { DetalleProductoComponent } from './producto/detalle-producto/detalle-producto.component';
 import { EditarProductoComponent } from './producto/editar-producto/editar-producto.component';
@@ -16,6 +15,11 @@ import { MatTableModule} from '@angular/material/table';
 import { MatIconModule} from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { LoginComponent } from './auth/login/login.component';
+import { RegistroComponent } from './auth/registro/registro.component';
+import { MenuComponent } from './menu/menu.component';
+import { IndexComponent } from './index/index.component';
+
 
 
 
@@ -26,12 +30,15 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     EditarProductoComponent,
     NuevoProductoComponent,
     DashboardComponent,
-    
+    LoginComponent,
+    RegistroComponent,
+    MenuComponent,
+    IndexComponent,
+   
  
   ],
   imports: [
     CommonModule,
-    HomeModule,
     RouterModule,
     FormsModule,
     MatSnackBarModule,
@@ -51,7 +58,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     DetalleProductoComponent,
     EditarProductoComponent,
     NuevoProductoComponent,
-    DashboardComponent
+    DashboardComponent,
+    LoginComponent,
+    RegistroComponent,
+    MenuComponent,
 
 
     

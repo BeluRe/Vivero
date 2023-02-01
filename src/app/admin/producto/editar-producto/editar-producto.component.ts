@@ -42,7 +42,7 @@ export class EditarProductoComponent implements OnInit {
       error: error => {
 
         Swal.fire('Fail', 'Error','error');
-        this.router.navigate(['/dashboard']);
+        this.router.navigate(['/lista']);
 
       }}
     );
@@ -57,7 +57,7 @@ export class EditarProductoComponent implements OnInit {
       next: (data) => {
         console.log(data)
         Swal.fire('Producto editado', 'Producto editado con exito','success');
-        this.router.navigate(['/dashboard']);
+        this.router.navigate(['/lista']);
       },
       error: (error) => {
         console.log(error)

@@ -1,4 +1,4 @@
-
+<app-menu></app-menu>
 <div class="container">
 <div class="row">
  
@@ -34,8 +34,22 @@
   <button class="btn btn-outline-danger boton"(click)="eliminar(producto.id)"> <mat-icon>delete_outline</mat-icon></button>
 </td>
      
+
 </tbody>
 </table>
 
+
+
+
 <button type="button" class="btn btn-success" style="width: 100%;" routerLink="/dashboard">Volver</button>
-                         
+                      
+ 
+<button mat-list-item routerLink="/nuevo">
+   <mat-icon mat-list-icon >library_add</mat-icon> Añadir producto
+ </button>
+ 
+
+<div class="mt-3" *ngIf="isAdmin">
+   <button class="btn btn-outline-success btn-lg" routerLink="/nuevo">
+     <i class="fas fa-plus-circle"></i> Nuevo Producto</button>
+ </div>
