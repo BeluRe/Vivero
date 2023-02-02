@@ -1,37 +1,24 @@
 <app-menu></app-menu>
-
-<div class="boostrap-wrapper vevo">
-  <div class="cointainer">
-    <div class="col-md-6 offset-md-3" style="margin-bottom: 50px; margin-top: 50px">
-
-<mat-card style="padding-top: 50px; padding-bottom: 50px">
-
-  <div class="container text-center" style="padding-bottom: 30px">
-    <h1 class="text-center">Nuevo Producto</h1>
-  </div>
-
-<form (ngSubmit)="onCreate()" novalidate #f="ngForm" class="form-style">
-
-  <mat-form-field class="full-width" appearance="outline"> 
-    <mat-label>Nombre Producto</mat-label>
-      <input matInput required [(ngModel)]="nombre" name="nombre" placeholder="Digite nombre de la Planta" />
-    <mat-hint>El nombre debe ser único</mat-hint>
-  </mat-form-field>
-
-  <mat-form-field class="full-width" appearance="outline"><mat-label>Precio</mat-label>
-      <input type="number" matInput required [(ngModel)]="precio" name="precio" placeholder="Digite el precio" />
-  </mat-form-field>
-
-<div class="container text-center">
-  <button mat-stroked-button color="primary" [disabled]="!f.valid">Registrar</button>
-</div>
-
-</form>
-</mat-card>
-
-
-<button type="button" class="btn btn-success" style="width: 100%;" routerLink="/dashboard">Volver</button>
-
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-4 mx-auto">
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre"
+                    [(ngModel)]="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="precio">Precio</label>
+                    <input type="number" class="form-control" id="precio" name="precio"
+                    [(ngModel)]="precio" required>
+                </div>
+                <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">
+                    <i class="fas fa-plus-circle"></i> Crear</button>
+                    
+                <button class="btn btn-outline-primary btn-block" routerLink="/lista">
+                    <i class="fas fa-arrow-alt-circle-left"></i> Volver</button>
+            </form>
+        </div>
     </div>
-  </div>
 </div>

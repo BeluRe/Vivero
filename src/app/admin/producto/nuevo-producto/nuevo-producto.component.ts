@@ -15,8 +15,10 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class NuevoProductoComponent implements OnInit {
 
-nombre: string= "";
-precio: number = 0;
+
+  nombre = '';
+  precio : any ;
+  id: any;
 
 
 
@@ -30,7 +32,7 @@ precio: number = 0;
  
   onCreate(): void{
     
-  const producto = new Producto({nombre: this.nombre, precio: this.precio});
+    const producto = new Producto(this.nombre, this.precio, this.id);
   this.productoService.save(producto).subscribe({
       next: (data) => {
         console.log(data)
@@ -44,6 +46,7 @@ precio: number = 0;
       }}
     )
   }
+ 
 }
 
 

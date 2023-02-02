@@ -13,11 +13,10 @@ import Swal from 'sweetalert2';
   styleUrls: ['./lista-producto.component.css']
 })
 export class ListaProductoComponent implements OnInit {
-  productos!: Producto[];
-  roles: string[] = [];
-  tokenService: any;
-  isAdmin:  any;
   
+  productos: Producto[] = [];
+  roles!: string[];
+  isAdmin = false;
 
 
   constructor(
@@ -28,7 +27,7 @@ export class ListaProductoComponent implements OnInit {
   ngOnInit(): void {
 
     this.cargarProductos();
-    this.roles = this.tokenService.getAuthorities();
+    this.roles = this.tokenservice.getAuthorities();
     this.roles.forEach(rol => {
       if (rol === 'ROLE_ADMIN') {
         this.isAdmin = true;
@@ -51,7 +50,7 @@ export class ListaProductoComponent implements OnInit {
         console.log(err);
       } }
     );
-  }
+  };
 
   eliminar(id: number){
     this.productoService.delete(id).subscribe({

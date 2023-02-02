@@ -1,5 +1,7 @@
+<app-menu></app-menu>
+
 <div class="text-center" *ngIf="isLogged; else loggedOut">
-         <h2>Ya has iniciado sesion</h2>
+         <h2>Ya iniciaste sesión</h2>
  
 
 </div>
@@ -20,7 +22,7 @@
                  <div class="card-body">
                      <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
                          <div class="form-group">
-                             <label for="nombreUsuario">Nombre de Usuario</label>
+                             <label for="nombreUsuario">Usuario</label>
                              <input type="text" name="nombreUsuario" id="nombreUsuario" class="form-control"
                              [(ngModel)]="nombreUsuario" required>
                          </div>

@@ -4,6 +4,12 @@ import { ListaProductoComponent } from './producto/lista-producto/lista-producto
 import { DetalleProductoComponent } from './producto/detalle-producto/detalle-producto.component';
 import { EditarProductoComponent } from './producto/editar-producto/editar-producto.component';
 import { NuevoProductoComponent } from './producto/nuevo-producto/nuevo-producto.component';
+
+import { LoginComponent } from './auth/login/login.component';
+import { RegistroComponent } from './auth/registro/registro.component';
+import { MenuComponent } from './menu/menu.component';
+import { IndexComponent } from './index/index.component';
+
 import { RouterModule } from '@angular/router';
 import { MatSnackBarModule} from '@angular/material/snack-bar';
 import { MatFormFieldModule} from '@angular/material/form-field';
@@ -14,12 +20,7 @@ import { MatListModule} from '@angular/material/list';
 import { MatTableModule} from '@angular/material/table';
 import { MatIconModule} from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { LoginComponent } from './auth/login/login.component';
-import { RegistroComponent } from './auth/registro/registro.component';
-import { MenuComponent } from './menu/menu.component';
-import { IndexComponent } from './index/index.component';
-
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 
 
@@ -29,7 +30,6 @@ import { IndexComponent } from './index/index.component';
     DetalleProductoComponent,
     EditarProductoComponent,
     NuevoProductoComponent,
-    DashboardComponent,
     LoginComponent,
     RegistroComponent,
     MenuComponent,
@@ -49,6 +49,7 @@ import { IndexComponent } from './index/index.component';
     MatListModule,
     MatTableModule,
     MatIconModule,
+    MatToolbarModule
     
     
  
@@ -58,12 +59,9 @@ import { IndexComponent } from './index/index.component';
     DetalleProductoComponent,
     EditarProductoComponent,
     NuevoProductoComponent,
-    DashboardComponent,
     LoginComponent,
     RegistroComponent,
-    MenuComponent,
-
-
+    MenuComponent
     
   ]
 })

@@ -1,42 +1,24 @@
+
 <app-menu></app-menu>
-
-<div class="cointainer" >
-         <div class="boostrap-wrapper vevo">
-         <div class="col-md-6 offset-md-3" style="margin-bottom: 50px; margin-top: 50px">
-     
-     
-     
-           <mat-card style="padding-top: 50px; padding-bottom: 50px">
-             <div class="container text-center" style="padding-bottom: 30px">
-
-               <h1 class="text-center">Registrar Planta</h1>
-             </div>
-     
-             <form (ngSubmit)="onUpdate()" novalidate #f="ngForm" class="form-style">
-               <mat-form-field class="full-width" appearance="outline">
-                 <mat-label>Nombre de la planta</mat-label>
-                 <!-- required es un campo requerido -->
-                 <input disabled matInput required [(ngModel)]="producto.nombre" name="nombre"
-                   placeholder="Digite nombre de la Planta" />
-               </mat-form-field>
-     
-               <mat-form-field class="full-width" appearance="outline">
-                 <mat-label>Precio</mat-label>
-                 <input type="number" matInput required [(ngModel)]="producto.precio" name="precio"
-                   placeholder="Digite el precio" />
-               </mat-form-field>
-     
-     
-               <div class="container text-center">
-                 <!-- Boton submit -->
-                 <button mat-stroked-button color="primary" [disabled]="!f.valid ">
-                   Actualizar
-                 </button>
-                 <!-- Reset sirve para limpiar los campos -->
-               </div>
-             </form>
-           </mat-card>
-           <button type="button" class="btn btn-success" style="width: 100%;" routerLink="/lista">Volver</button>
-         </div>
-       </div>
-     </div>
+<div class="container" *ngIf="producto">
+    <div class="row mt-5">
+        <div class="col-md-4 mx-auto">
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre"
+                    [(ngModel)]="producto.nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="precio">Precio</label>
+                    <input type="number" class="form-control" id="precio" name="precio"
+                    [(ngModel)]="producto.precio" required>
+                </div>
+                <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">
+                    <i class="fas fa-pencil-alt"></i> Actualizar</button>
+                <button class="btn btn-outline-primary btn-block" routerLink="/lista">
+                    <i class="fas fa-arrow-alt-circle-left"></i> Volver</button>
+            </form>
+        </div>
+    </div>
+</div>
