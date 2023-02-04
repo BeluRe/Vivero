@@ -19,8 +19,12 @@ import { MatCardModule} from '@angular/material/card';
 import { MatListModule} from '@angular/material/list';
 import { MatTableModule} from '@angular/material/table';
 import { MatIconModule} from '@angular/material/icon';
-import { FormsModule } from '@angular/forms';
+import { FormGroup, FormGroupName, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { TiendaComponent } from './shop/tienda/tienda.component';
+import { FooterComponent } from './shop/footer/footer.component';
+import { ContactoComponent } from './shop/contacto/contacto.component';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 
@@ -34,6 +38,11 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     RegistroComponent,
     MenuComponent,
     IndexComponent,
+    TiendaComponent,
+    FooterComponent,
+    ContactoComponent,
+    
+    
    
  
   ],
@@ -41,6 +50,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     CommonModule,
     RouterModule,
     FormsModule,
+    ReactiveFormsModule,
     MatSnackBarModule,
     MatFormFieldModule,
     MatInputModule,
@@ -49,7 +59,12 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MatListModule,
     MatTableModule,
     MatIconModule,
-    MatToolbarModule
+    MatToolbarModule,
+    
+    
+    
+   
+   
     
     
  

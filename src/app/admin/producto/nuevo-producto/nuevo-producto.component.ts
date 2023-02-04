@@ -34,6 +34,7 @@ export class NuevoProductoComponent implements OnInit {
     
     const producto = new Producto(this.nombre, this.precio, this.id);
   this.productoService.save(producto).subscribe({
+    
       next: (data) => {
         console.log(data)
         Swal.fire('Producto registrado', 'Producto registrado con exito','success');

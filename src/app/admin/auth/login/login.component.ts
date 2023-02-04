@@ -16,11 +16,11 @@ export class LoginComponent implements OnInit {
   
   isLogged = false;
   isLoginFail = false;
-  loginUsuario: LoginUsuario | undefined;
-  nombreUsuario: string | undefined;
+  loginUsuario!: LoginUsuario;
+  nombreUsuario!: string;
   password: string | undefined;
   roles: string[] = [];
-  errMsj: string | undefined;
+  errMsj!: string;
 
 
   constructor(
@@ -55,7 +55,7 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['/']);
        
 
-        (err: { error: { mensaje: string | undefined; }; }) =>{
+        (err: { error: { mensaje: string  }; }) =>{
   this.isLogged = false;
   this.isLoginFail = true;
   this.errMsj = err.error.mensaje;

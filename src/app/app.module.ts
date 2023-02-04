@@ -19,8 +19,6 @@ import { interceptorProvider } from './admin/interceptors/prod-interceptor.servi
   declarations: [
     AppComponent,
    
-    
-    
   ],
   imports: [
     BrowserModule,
@@ -35,12 +33,9 @@ import { interceptorProvider } from './admin/interceptors/prod-interceptor.servi
     HttpClientModule,
     FormsModule,
     AdminModule,
+    
+   
  
-    
-    
-    
-
-
   ],
 
   providers: [interceptorProvider],

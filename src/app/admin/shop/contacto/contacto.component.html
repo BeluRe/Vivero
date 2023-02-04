@@ -1,0 +1,44 @@
+<app-menu></app-menu>
+
+<form [formGroup]="form" novalidate (ngSubmit)="save($event)">
+
+
+    <p>
+      Name: <br/>
+      <input type="text" formControlName="name">
+    </p>
+   
+        
+      
+    
+    <p>
+      Email: <br/>
+      <input type="email" formControlName="email">
+    </p>
+    <div *ngIf="emailField.errors && emailField.touched">
+        <p *ngIf="emailField.hasError('required')">
+          Es un campo requerido..
+          <p *ngIf="emailField.hasError('email')">
+            Ingresar Email válido.
+          </p>
+      
+        
+      </div>
+    <p>
+        Texto largo: <br/>
+      <textarea cols="30" rows="10" formControlName="text"></textarea>
+      <small>{{ this.form.get('text').value.length }}/80</small>
+    </p>
+    <div *ngIf="form.get('text').errors && form.get('text').touched">
+      <p *ngIf="form.get('text').hasError('required')">
+        Es un campo requerido
+      </p>
+      <p *ngIf="form.get('text').hasError('maxlength')">
+        80 caracteres máximo.
+      </p>
+    </div>
+    <button type="submit" [disabled]="form.invalid">Enviar</button>  
+  </form>
+  
+  
+<app-footer></app-footer>

@@ -17,6 +17,7 @@ export class ListaProductoComponent implements OnInit {
   productos: Producto[] = [];
   roles!: string[];
   isAdmin = false;
+  tokenService: any;
 
 
   constructor(
@@ -27,6 +28,7 @@ export class ListaProductoComponent implements OnInit {
   ngOnInit(): void {
 
     this.cargarProductos();
+   
     this.roles = this.tokenservice.getAuthorities();
     this.roles.forEach(rol => {
       if (rol === 'ROLE_ADMIN') {
@@ -66,6 +68,16 @@ export class ListaProductoComponent implements OnInit {
       }}
     )
   };
+    
+  isLogged = false;
+  
+  nombreUsuario: any  = '';
+
+
+
+
+
 }
+
 
 

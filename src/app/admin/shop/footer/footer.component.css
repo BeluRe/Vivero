@@ -1,0 +1,38 @@
+.footer {
+  width: 100%;
+  background-color: rgba(203, 210, 210, 0.5);
+  border-radius: 5px;
+  }
+  .linktext{
+  color: black;
+  margin-left: 8px;
+  }
+  .sociales{
+  margin-left: 15px;
+  }
+  .mb-3{
+  margin-left: 15px;
+  }
+  #logoAP{
+  width: 150px;
+  }
+  img{
+  width: 25px;
+  }
+         
+         
+         
+         
+         
+         .redes{
+         margin-right: 0.5em;
+         }
+         
+         .redes img{
+         margin-right: 00.5em;
+         }
+         
+         .btn{
+         border-width: medium;
+         }
+         
