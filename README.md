@@ -1,5 +1,1 @@
-# Vivero
-
-carpeta Demo contiene el backend.
-#
-carpeta Src contiene el frontend.
+crud productos + login y registro de usuarios + pasarela de pagos.
