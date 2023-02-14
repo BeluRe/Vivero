@@ -11,7 +11,7 @@
         <li class="nav-item" >
           <a class="nav-link " style="color: black;" routerLink="/contacto">Contacto</a>
         </li>
-        <li class="nav-item" *ngIf="!isLogged">
+        <li class="nav-item">
           <a class="nav-link " style="color: black;" routerLink="/tienda">Tienda </a>
         </li>
         <li class="nav-item" *ngIf="isLogged">
@@ -31,3 +31,5 @@
     </div>
   
 </nav>
+
+<app-footer></app-footer>

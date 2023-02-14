@@ -13,9 +13,10 @@ import { TiendaComponent } from './admin/shop/tienda/tienda.component';
 import { ContactoComponent } from './admin/shop/contacto/contacto.component';
 
 const routes: Routes = [
-  {path: '', component:TiendaComponent},
+  {path: '', component:IndexComponent},
   {path: 'login', component: LoginComponent},
   {path: 'registro', component:RegistroComponent},
+  {path: 'tienda', component:TiendaComponent},
   {path: 'contacto', component:ContactoComponent},
   
   {path: 'lista', component: ListaProductoComponent,canActivate: [guard], data: { expectedRol: ['admin', 'user'] }},

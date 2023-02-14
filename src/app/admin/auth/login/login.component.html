@@ -8,13 +8,7 @@
          <div class="container d-flex justify-content-center">
              <div class="card">
                  <div class="card-header">
-                     <ul class="nav nav-tabs">
-                         <li class="nav-item">
-                           <a class="nav-link active" routerLink="/login">Iniciar Sesión</a>
-                         </li>
-                         
-                         
-                       </ul>
+                   <a>Iniciar sesión</a>      
                  </div>
                  <div class="card-body">
                      <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
@@ -30,7 +24,7 @@
                          </div>
                          <div class="form-group">
                              <button class="btn btn-outline-success btn-block" [disabled]="!f.valid" >
-                                 <i class="fas fa-sign-in-alt"></i> Iniciar Sesión</button>
+                                 <i class="fas fa-sign-in-alt"></i>Ingresar</button>
                          </div>
                      </form>
                      <div *ngIf="f.submitted && isLoginFail" class="alert alert-danger nt-3">{{errMsj}}</div>
